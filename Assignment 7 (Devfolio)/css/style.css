@@ -1,0 +1,783 @@
+/* Shared style */
+:root {
+    --default-font: "Assistant", sans-serif;
+    --main-color: #1e1e1e;
+    --secondery-color: #4e4e4e;
+    --blue-color: #0078ff;
+}
+
+html {
+    scroll-padding-top: 55px;
+}
+
+body {
+    font-family: var(--default-font);
+    background-color: #f5f5f5;
+}
+
+h3 {
+    font-size: 48px;
+    color: var(--main-color);
+    margin-bottom: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+p {
+    color: var(--secondery-color);
+    margin-bottom: 16px;
+}
+
+div.line {
+    width: 40px;
+    height: 5px;
+    background-color: var(--blue-color);
+    margin-inline: auto;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------- */
+/* Navbar section */
+.navbar {
+    padding-block: 10px;
+}
+
+.navbar div.container a.navbar-brand {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.navbar div.container button.navbar-toggler {
+    border: none;
+}
+
+.navbar div.container button.navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+ul.navbar-nav a.nav-link {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--secondery-color);
+    position: relative;
+}
+
+ul.navbar-nav a.nav-link.active {
+    color: white;
+}
+
+ul.navbar-nav a.nav-link:hover {
+    color: white;
+}
+
+li.nav-item {
+    padding: 15px;
+}
+
+li.nav-item a {
+    padding: 0 !important;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------- */
+/* Home section */
+div.home {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../image/hero-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+div.home div.container div.home-content h1 {
+    font-size: 48px;
+    font-weight: 600;
+}
+
+div.home div.container div.home-content p {
+    font-size: 42px;
+    font-weight: 600;
+    color: white;
+}
+
+div.home div.container div.home-content p::after {
+    content: "";
+    animation: typing 4s infinite;
+}
+
+@keyframes typing {
+    0% {
+        content: "|";
+    }
+
+    2.5% {
+        content: "D|";
+    }
+
+    5% {
+        content: "De|";
+    }
+
+    7.5% {
+        content: "Dev|";
+    }
+
+    10% {
+        content: "Deve|";
+    }
+
+    12.5% {
+        content: "Devel|";
+    }
+
+    15% {
+        content: "Develo|";
+    }
+
+    17.5% {
+        content: "Develop|";
+    }
+
+    20% {
+        content: "Develope|";
+    }
+
+    27.5% {
+        content: "Developer|";
+    }
+
+    30% {
+        content: "Develope|";
+    }
+
+    32.5% {
+        content: "Develop|";
+    }
+
+    35% {
+        content: "Develo|";
+    }
+
+    37.5% {
+        content: "Devel|";
+    }
+
+    40% {
+        content: "Deve|";
+    }
+
+    42.5% {
+        content: "Dev|";
+    }
+
+    45% {
+        content: "De|";
+    }
+
+    47.5% {
+        content: "D|";
+    }
+
+    50% {
+        content: "|";
+    }
+
+    52.5% {
+        content: "D|";
+    }
+
+    55% {
+        content: "De|";
+    }
+
+    57.5% {
+        content: "Des|";
+    }
+
+    60% {
+        content: "Desi|";
+    }
+
+    62.5% {
+        content: "Desig|";
+    }
+
+    65% {
+        content: "Design|";
+    }
+
+    67.5% {
+        content: "Designe|";
+    }
+
+    75% {
+        content: "Designer|";
+    }
+
+    77.5% {
+        content: "Designe|";
+    }
+
+    80% {
+        content: "Design|";
+    }
+
+    82.5% {
+        content: "Desig|";
+    }
+
+    85% {
+        content: "Desi|";
+    }
+
+    87.5% {
+        content: "Des|";
+    }
+
+    90% {
+        content: "De|";
+    }
+
+    95% {
+        content: "D|";
+    }
+
+    100% {
+        content: "|";
+    }
+}
+
+/* ----------------------------------------------------------------------------------------------------------------- */
+/* About section */
+div.about {
+    padding-top: 64px;
+}
+
+div.about div.container div.about-content {
+    margin-bottom: 48px;
+    padding: 64px 20px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+div.about div.container div.about-content div.about-image {
+    margin-bottom: 32px;
+}
+
+div.about div.container div.about-content div.about-image img {
+    margin-left: 10px;
+}
+
+div.about div.container div.about-content div.about-info ul li {
+    color: var(--secondery-color);
+    margin-bottom: 16px;
+}
+
+div.about div.container div.about-content div.about-info ul li span {
+    color: var(--main-color);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+div.about div.container div.about-content div.skill p {
+    font-size: 18px;
+    color: var(--main-color);
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+div.about div.container div.about-content div.skill span {
+    color: var(--secondery-color);
+}
+
+div.about div.container div.about-content div.skill div.progress {
+    border-radius: 0;
+    margin-block: 8px 18px;
+}
+
+div.about div.container div.about-content div.about-me {
+    padding-top: 24px;
+}
+
+div.about div.container div.about-content div.about-me div.about-header h5 {
+    font-size: 32px;
+    margin-bottom: 8px;
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+div.about div.container div.about-content div.about-me div.about-header h5::before {
+    content: "";
+    position: absolute;
+    height: 3.5px;
+    background-color: var(--blue-color);
+    width: 100px;
+    bottom: -12px;
+}
+
+div.about div.container div.about-content div.about-me p {
+    color: var(--secondery-color);
+}
+
+/* ----------------------------------------------------------------------------------------------------------------- */
+/* Service section */
+div.service {
+    padding-top: 64px;
+}
+
+div.service div.container div.service-content {
+    margin-bottom: 64px;
+}
+
+div.service div.container div.card {
+    padding: 2.5rem 1.3rem;
+    margin-bottom: 48px;
+    box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    border: none;
+}
+
+div.service div.container div.card div.card-icon {
+    margin-bottom: 16px;
+    color: var(--main-color);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 10px solid var(--blue-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
+    transition: all 500ms ease;
+}
+
+div.service div.container div.card:hover div.card-icon {
+    border-color: #cde1f8;
+    background-color: var(--blue-color);
+    color: white;
+}
+
+div.service div.container div.card div.card-icon i {
+    font-size: 32px;
+}
+
+div.service div.container div.card-content h2 {
+    font-size: 24px;
+    color: var(--main-color);
+    padding: 7px 0;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+div.service div.container div.card-content p {
+    color: var(--secondery-color);
+    margin-bottom: 16px;
+}
+
+/* Counter section */
+div.counter {
+    padding: 7rem 0;
+    background-image: linear-gradient(rgb(0, 120, 255, 0.7), rgb(0, 120, 255, 0.7)), url(../image/post-3.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+div.counter div.container div.item div.item-content div.item-icon {
+    margin-bottom: 16px;
+    color: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 10px solid #cde1f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
+}
+
+div.counter div.container div.item div.item-content div.item-icon i {
+    font-size: 32px;
+}
+
+div.counter div.container div.item div.item-content p {
+    font-size: 32px;
+    color: white;
+}
+
+div.counter div.container div.item div.item-content span {
+    color: white;
+}
+
+div.counter div.container div.item {
+    margin-bottom: 28px;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------- */
+/* Portfolio section */
+div.work {
+    padding-top: 64px;
+}
+
+div.work div.container div.work-content {
+    margin-bottom: 64px;
+}
+
+div.work div.card-container {
+    margin-bottom: 3rem;
+}
+
+div.work div.card-container {
+    box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+}
+
+div.work div.card-container div.card-img {
+    overflow: hidden;
+}
+
+div.work div.card-container div.card-img img {
+    transition: all 1s;
+}
+
+div.work div.card-container:hover div.card-img img {
+    scale: 1.3;
+}
+
+div.work div.card-container div.card-content {
+    padding: 2rem 3% 1rem 4%;
+    background-color: #fff;
+}
+
+div.work div.card-container div.card-content h2 {
+    font-size: 1.2rem;
+    color: #1e1e1e;
+}
+
+div.work div.card-container div.card-content p {
+    margin-bottom: 0;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+}
+
+div.work div.card-container div.card-content p span {
+    color: #0078ff;
+}
+
+div.work div.card-container div.card-content div.icon a {
+    font-size: 2.5rem;
+    color: #0078ff;
+    text-decoration: none;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------- */
+/* Slider section */
+div.slider {
+    padding-block: 8rem;
+    background-image: linear-gradient(rgb(0, 120, 255, 0.7), rgb(0, 120, 255, 0.7)), url(../image/overlay-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+div.slider div.slider-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.slider div.slider-image p {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    margin: 1rem 0;
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+div.slider div.carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+div.slider div.carousel-indicators {
+    bottom: -95px;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------- */
+/* Blog section */
+div.blog {
+    padding-top: 64px;
+}
+
+div.blog div.container div.blog-content {
+    margin-bottom: 64px;
+}
+
+div.blog div.card-container {
+    margin-bottom: 3rem;
+    box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 6px 6px;
+    overflow: hidden;
+
+}
+
+div.blog div.card-container div.card-img {
+    cursor: pointer;
+}
+
+div.blog div.card-container div.card-content {
+    background-color: #fff;
+    padding: 16px;
+    position: relative;
+}
+
+div.blog div.card-container div.card-content div.category-box {
+    position: absolute;
+    text-align: center;
+    top: -15px;
+    left: 15px;
+    right: 15px;
+    line-height: 25px;
+    overflow: hidden;
+}
+
+div.blog div.card-container div.card-content div.category-box div.category-item {
+    background-color: #0078ff;
+    color: #fff;
+    padding: 0 15px 5px;
+    border-radius: 4px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+div.blog div.card-container div.card-content div.category-box div.category-item h6 {
+    color: #fff;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1px;
+    margin-bottom: 0;
+}
+
+div.blog div.card-container div.card-content h3 {
+    font-size: 1.3rem;
+    color: var(--main-color);
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-top: 0.6rem;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+div.blog div.card-container div.card-content h3:hover {
+    color: var(--blue-color);
+}
+
+div.blog div.card-container div.card-footer {
+    background-color: #f8f8f8;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 8px 16px;
+}
+
+div.blog div.card-container div.card-footer div.author img {
+    width: 32px;
+}
+
+div.blog div.card-container div.card-footer div.author a {
+    color: var(--main-color);
+    transition: all 0.4s ease-in-out;
+}
+
+div.blog div.card-container div.card-footer div.author a:hover {
+    color: var(--blue-color);
+}
+
+/* Contact section */
+div.contact {
+    margin-top: 64px;
+    padding-top: 120px;
+    background-image: linear-gradient(rgb(0, 120, 255, 0.7), rgb(0, 120, 255, 0.7)), url(../image/overlay-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+div.contact div.container div.contact-container {
+    margin-bottom: 48px;
+    padding: 48px 20px;
+    box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+}
+
+div.contact div.container div.contact-container h5 {
+    font-size: 32px;
+    margin-bottom: 8px;
+    position: relative;
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+div.contact div.container div.contact-container h5::before {
+    content: "";
+    position: absolute;
+    height: 3.5px;
+    background-color: var(--blue-color);
+    width: 100px;
+    bottom: -12px;
+}
+
+div.contact div.container div.contact-container input,
+div.contact div.container div.contact-container textarea {
+    padding: 10px 15px;
+    border-radius: 0;
+}
+
+div.contact div.contact-container input:focus,
+div.contact div.contact-container textarea:focus {
+    outline: none;
+    border-color: #0078ff;
+    box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
+}
+
+div.contact div.container div.contact-container button {
+    font-size: 20px;
+    background: var(--blue-color);
+    border: 0;
+    padding: 10px 24px;
+    color: #fff;
+    margin-top: 15px;
+    transition: all 0.4s ease-in-out;
+}
+
+div.contact div.container div.contact-container button:hover {
+    background-color: #3393ff;
+    box-shadow: 0 0 0 4px #cde1f8;
+}
+
+div.contact div.container div.contact-container div.info {
+    padding-top: 24px;
+}
+
+div.contact div.contact-container ul.content li {
+    margin-bottom: 0.5rem;
+}
+
+div.contact div.contact-container ul.content li i {
+    color: #0078ff;
+    margin-right: 10px;
+}
+
+div.contact div.contact-container ul.content li span {
+    color: var(--secondery-color);
+    font-size: 18px;
+}
+
+div.contact div.contact-container div.social-media {
+    padding-block: 24px;
+}
+
+div.contact div.contact-container div.social-media ul li {
+    margin-right: 15px;
+}
+
+div.contact div.contact-container div.social-media ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-color);
+    text-decoration: none;
+    height: 45px;
+    width: 45px;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    line-height: 1.6;
+    border: 3px solid var(--blue-color);
+    transition: all 0.5s ease;
+}
+
+div.contact div.contact-container div.social-media ul li a:hover {
+    border-color: #cde1f8;
+    background-color: var(--blue-color);
+    color: white;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------- */
+/* Footer section */
+footer {
+    padding: 25px 0;
+    background: #0062d3;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------- */
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+    /* Home section */
+    div.home div.container div.home-content h1 {
+        font-size: 72px;
+    }
+
+    div.home div.container div.home-content p {
+        font-size: 40px;
+    }
+
+    /* About section */
+    div.about div.container div.about-content {
+        padding: 64px 48px;
+    }
+
+    div.about div.container div.about-content div.about-me {
+        padding-top: 0;
+    }
+
+    /* Contact section */
+    div.contact div.container div.contact-container {
+        padding: 48px;
+    }
+
+    div.contact div.container div.contact-container div.info {
+        padding-top: 0;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+    /* Navbar section */
+    ul.navbar-nav a.nav-link {
+        color: white;
+    }
+
+    ul.navbar-nav a.nav-link::before {
+        content: "";
+        height: 2px;
+        width: 0;
+        background-color: white;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+    }
+
+    ul.navbar-nav a.nav-link:hover::before,
+    ul.navbar-nav a.nav-link.active:before {
+        width: 80%;
+        visibility: visible;
+    }
+
+    li.nav-item {
+        padding-block: 0;
+    }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {}

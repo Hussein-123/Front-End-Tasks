@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Personal Data</title>
+</head>
+
+<body>
+    <form method="post">
+        <fieldset style="background-color:azure;">
+            <legend style="background-color: #98e6fa;">Personal Data</legend>
+            <br>
+            <fieldset style="background-color: rgb(143, 200, 218);">
+                <legend style="background-color: #98e6fa; height: 60px;">
+                    <center>
+                        <p>Your Name</p>
+                    </center>
+                </legend>
+                <br>
+                <table>
+                    <tr>
+                        <td><label for="fname">first name </label></td>
+                        <td> : </td>
+                        <td><input type="text" id="fname" placeholder="ex hussein" name="first name" minlength="3"
+                                maxlength="20" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="sname">second name </label></td>
+                        <td> : </td>
+                        <td><input type="text" id="sname" placeholder="ex mohamed" name="second name" minlength="3"
+                                maxlength="20" required></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <br>
+            <br>
+            <table>
+                <tr>
+                    <td> <label for="phone">your phone</label></td>
+                    <td>:</td>
+                    <td><input type="text" id="phone" name="phone" required></td>
+                </tr>
+                <tr>
+                    <td> <label for="email">Email </label></td>
+                    <td>:</td>
+                    <td><input type="email" id="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <td> <label for="pass">password </label></td>
+                    <td>:</td>
+                    <td><input type="password" id="pass" name="password" required></td>
+                </tr>
+                <tr>
+                    <td> <label for="rpass">repassword </label></td>
+                    <td>:</td>
+                    <td><input type="password" id="rpass" name="repassword" required></td>
+                </tr>
+            </table>
+            <br>
+            <br>
+            <br>
+            <input type="radio" name="gender" value="male" id="male">
+            <label for="male">Male</label><br>
+            <input type="radio" name="gender" value="female" id="female">
+            <label for="female">Female</label>
+            <br>
+            <br>
+            <br>
+            <input type="checkbox" name="status" value="student" id="student">
+            <label for="student">Student</label><br>
+            <input type="checkbox" name="status" value="graduated" id="graduated">
+            <label for="graduated">Graduated</label>
+            <br>
+            <br>
+            <br>
+            <select name="cars" id="cars">
+                <optgroup label="German cars">
+                    <option value="mercedes" selected>Mercedes</option>
+                    <option value="audi">Audi</option>
+                </optgroup>
+                <optgroup label="Korean cars" disabled>
+                    <option value="Hyundai">Hyundai</option>
+                    <option value="Kia">Kia</option>
+                </optgroup>
+            </select>
+            <br>
+            <button style="background-color:azure; border: none;"><img src="./submit-button.png" alt="submit-button"
+                    width="90px"></button>
+        </fieldset>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,1146 @@
+/* Shared styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-default: "Open Sans", sans-serif;
+    --font-primary: "Amatic SC", sans-serif;
+    --font-secondary: "Inter", sans-serif;
+    --color-light-gray: #eee;
+    --primary-color: #ce1212;
+    --color-secondary: #37373f;
+    --color-tertiary: #7f7f90;
+    --color-icon: #212529;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background-color: #dd5959;
+    color: #fdf7f7;
+}
+
+/* -------------------------------------------------------------------------------------------- */
+/* Navbar section */
+div.navbar {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    box-shadow: 0px 0px 14px 0px #0000001b;
+}
+
+div.navbar div.container {
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: auto;
+    padding: 25px 10px;
+}
+
+div.navbar div.container div.nav-logo a {
+    text-decoration: none;
+    color: var(--color-icon);
+}
+
+div.navbar div.container div.nav-logo h1 {
+    font-size: 30px;
+    font-family: var(--font-default);
+}
+
+div.navbar div.container div.nav-logo h1::after {
+    content: ".";
+    color: var(--primary-color);
+}
+
+div.navbar div.container div.nav-links ul {
+    display: none;
+}
+
+div.navbar div.container div.nav-icon a {
+    text-decoration: none;
+    color: var(--color-icon);
+    font-size: 25px;
+}
+
+div.navbar div.container div.nav-icon i.fa-moon {
+    padding-right: 20px;
+}
+
+/* -------------------------------------------------------------------------------------------- */
+/* Home section */
+div.home {
+    background-color: var(--color-light-gray);
+}
+
+div.home div.container {
+    width: 95%;
+    margin-block: 0;
+    padding-block: 130px 40px;
+    margin-inline: auto;
+    gap: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+div.home div.container>* {
+    width: 100%;
+}
+
+div.home div.container picture img {
+    width: 100%;
+    filter: drop-shadow(4px 4px 9px #000a);
+}
+
+div.home div.container picture img:hover {
+    animation: shake 1s infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+div.home div.container div.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+div.home div.container div.home-content h2 {
+    font-size: 65px;
+    font-family: var(--font-primary);
+    color: var(--color-secondary);
+}
+
+div.home div.container div.home-content p {
+    font-size: 16px;
+    font-family: var(--font-default);
+    color: #4f4f5a;
+    margin-block: 20px;
+    line-height: 1.6em;
+}
+
+div.home div.container div.home-content div.btn {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    font-size: 15px;
+    font-family: var(--font-default);
+}
+
+div.home div.container div.home-content div.btn a.booking {
+    text-decoration: none;
+    color: white;
+    border-radius: 200px;
+    padding: 10px 25px;
+    background-color: var(--primary-color);
+    transition: all 0.4s ease-in-out;
+}
+
+div.home div.container div.home-content div.btn a.booking:hover {
+    background-color: #ea2424;
+}
+
+div.home div.container div.home-content div.btn a.video {
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 5px;
+    color: var(--color-icon);
+    display: flex;
+    align-items: center;
+    transition: all 0.4s ease-in-out;
+}
+
+div.home div.container div.home-content div.btn a.video div.play-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(to right, var(--primary-color) 0% 50%, transparent 50% 100%);
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+div.home div.container div.home-content div.btn a.video div.play-icon::after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+}
+
+div.home div.container div.home-content div.btn a.video div.play-icon i {
+    z-index: 1;
+}
+
+div.home div.container div.home-content div.btn a.video:hover {
+    color: var(--primary-color);
+}
+
+/* -------------------------------------------------------------------------------------------- */
+/* chef section */
+div.chef {
+    padding: 100px 10px;
+}
+
+div.chef div.container {
+    width: 95%;
+    margin-inline: auto;
+}
+
+div.chef div.container div.chef-content {
+    text-align: center;
+}
+
+div.chef div.container div.chef-content h2 {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: var(--font-secondary);
+    color: var(--color-tertiary);
+    text-transform: uppercase;
+}
+
+div.chef div.container div.chef-content p {
+    font-size: 50px;
+    font-family: var(--font-primary);
+    color: var(--color-icon);
+}
+
+div.chef div.container div.chef-content p span {
+    color: var(--primary-color);
+}
+
+div.chef div.container div.chef-item {
+    display: flex;
+    flex-wrap: wrap;
+    --gap: 30px;
+    padding-block: 35px;
+    gap: var(--gap);
+}
+
+div.chef div.container div.chef-item div.item div.inner-item div.image img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+div.chef div.container div.chef-item div.item div.inner-item div.image {
+    position: relative;
+}
+
+div.chef div.container div.chef-item div.item div.inner-item div.image::before {
+    content: "";
+    position: absolute;
+    height: 60px;
+    width: 100%;
+    background-image: url(../image/team-shape.svg);
+    bottom: 0;
+}
+
+div.chef div.container div.chef-item div.item div.inner-item div.image div.media {
+    position: absolute;
+    top: 35px;
+    right: -30%;
+    transition: all 0.4s ease-in-out 0.5ms;
+}
+
+div.chef div.container div.chef-item div.item div.inner-item div.image div.media ul {
+    list-style: none;
+    background-color: #ffffff4d;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+div.chef div.container div.chef-item div.item div.inner-item div.image div.media li a {
+    text-decoration: none;
+}
+
+div.chef div.container div.chef-item div.item div.inner-item div.image div.media li a i {
+    color: #37373f66;
+    font-size: 20px;
+    padding: 10px 5px;
+    transition: all 0.4s ease-in-out;
+}
+
+div.chef div.container div.chef-item div.item div.inner-item div.image div.media li a i:hover {
+    color: #00000078;
+}
+
+div.chef div.container div.chef-item div.item div.inner-item div.content {
+    padding: 10px 25px 25px;
+}
+
+div.chef div.container div.chef-item div.item div.inner-item div.content h3 {
+    font-size: 19px;
+    font-family: var(--font-secondary);
+    color: var(--color-icon);
+    margin-top: 10px;
+}
+
+div.chef div.container div.chef-item div.item div.inner-item div.content p {
+    font-size: 14px;
+    font-family: var(--font-default);
+    color: var(--color-tertiary);
+    text-transform: capitalize;
+    margin: 5px 0 10px;
+}
+
+div.chef div.container div.chef-item div.item div.inner-item div.content p.pragraph {
+    font-size: 15px;
+    line-height: 1.6em;
+    font-style: italic;
+}
+
+div.chef div.container div.chef-item div.item {
+    box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 6px;
+    transition: all 0.4S ease-in-out;
+    overflow: hidden;
+}
+
+div.chef div.container div.chef-item div.item:hover {
+    transform: scale(1.05);
+}
+
+div.chef div.container div.chef-item div.item:hover div.inner-item div.image div.media {
+    right: 15px;
+}
+
+/* -------------------------------------------------------------------------------------------- */
+/* gallery section */
+div.gallery {
+    background-color: var(--color-light-gray);
+    padding: 100px 10px;
+}
+
+div.gallery div.container {
+    width: 95%;
+    margin-inline: auto;
+}
+
+div.gallery div.container div.gallery-content {
+    text-align: center;
+}
+
+div.gallery div.container div.gallery-content h2 {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: var(--font-secondary);
+    color: var(--color-tertiary);
+    text-transform: uppercase;
+}
+
+div.gallery div.container div.gallery-content p {
+    font-size: 50px;
+    font-family: var(--font-primary);
+    color: var(--color-icon);
+}
+
+div.gallery div.container div.gallery-content p span {
+    color: var(--primary-color);
+}
+
+div.gallery div.container div.gallery-image {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-block: 35px;
+}
+
+div.gallery div.container div.gallery-image div.meal {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border: 4px solid #fff;
+}
+
+div.gallery div.container div.gallery-image div.meal img {
+    width: 100%;
+    display: block;
+    transition: all 0.6s ease-in-out;
+}
+
+div.gallery div.container div.gallery-image div.meal.pizza {
+    order: 1;
+}
+
+div.gallery div.container div.gallery-image div.meal.burger {
+    order: 2;
+}
+
+div.gallery div.container div.gallery-image div.meal.pizza-slices {
+    order: 3;
+}
+
+div.gallery div.container div.gallery-image div.meal.omelette {
+    order: 4;
+}
+
+div.gallery div.container div.gallery-image div.meal.steak {
+    order: 5;
+}
+
+div.gallery div.container div.gallery-image div.meal.fried {
+    order: 6;
+}
+
+div.gallery div.container div.gallery-image div.meal.kofta {
+    order: 7;
+}
+
+div.gallery div.container div.gallery-image div.meal div.layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #00000096;
+    top: 120%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.6s ease-in-out;
+}
+
+div.gallery div.container div.gallery-image div.meal div.layer h2 {
+    font-size: 24px;
+    font-family: var(--font-secondary);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+div.gallery div.container div.gallery-image div.meal div.layer p {
+    font-size: 16px;
+    font-family: var(--font-default);
+    color: #DDD;
+}
+
+div.gallery div.container div.gallery-image div.meal:hover div.layer {
+    top: 0;
+}
+
+div.gallery div.container div.gallery-image div.meal:hover img {
+    transform: scale(1.2);
+}
+
+/* -------------------------------------------------------------------------------------------- */
+/* contact section */
+div.contact {
+    padding: 100px 10px;
+}
+
+div.contact div.container {
+    width: 95%;
+    margin-inline: auto;
+}
+
+div.contact div.container div.contact-content {
+    text-align: center;
+}
+
+div.contact div.container div.contact-content h2 {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: var(--font-secondary);
+    color: var(--color-tertiary);
+    text-transform: uppercase;
+}
+
+div.contact div.container div.contact-content p {
+    font-size: 50px;
+    font-family: var(--font-primary);
+    color: var(--color-icon);
+}
+
+div.contact div.container div.contact-content p span {
+    color: var(--primary-color);
+}
+
+div.contact div.container iframe {
+    width: 100%;
+    margin-top: 35px;
+}
+
+div.contact div.container div.details {
+    display: flex;
+    flex-wrap: wrap;
+    margin-block: 20px;
+    --gap: 20px;
+    gap: var(--gap);
+}
+
+div.contact div.container div.details>div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    background-color: #f5f5f5;
+}
+
+div.contact div.container div.details div.icon {
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+div.contact div.container div.details div.icon i {
+    font-size: 20px;
+    color: var(--color-light-gray);
+}
+
+div.contact div.container div.details>div h3 {
+    font-size: 20px;
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #7d7d7d;
+}
+
+div.contact div.container div.details>div p {
+    font-size: 16px;
+    font-family: var(--font-default);
+    color: var(--color-icon);
+}
+
+div.contact div.container div.details>div a {
+    text-decoration: none;
+    font-size: 16px;
+    font-family: var(--font-default);
+    color: var(--color-icon);
+}
+
+div.contact div.container div.details form {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 20px #00000014;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    --gap-form: 10px;
+    gap: var(--gap-form);
+}
+
+div.contact div.container div.details form>* {
+    width: 100%;
+}
+
+div.contact div.container div.details form div.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+div.contact div.container div.details form div.input-group input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid var(--color-light-gray);
+}
+
+div.contact div.container div.details form div.input-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+div.contact div.container div.details form input,
+div.contact div.container div.details form textarea {
+    padding: 15px;
+    border: 2px solid var(--color-light-gray);
+}
+
+div.contact div.container div.details form input:focus,
+div.contact div.container div.details form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+div.contact div.container div.details form textarea {
+    resize: vertical;
+}
+
+div.contact div.container div.details form button.main-btn {
+    margin-top: 25px;
+    padding: 12px 40px;
+    font-size: 15px;
+    font-family: var(--font-default);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 200px;
+    color: white;
+    width: fit-content;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+div.contact div.container div.details form button.main-btn:hover {
+    background-color: #ea2424;
+}
+
+/* -------------------------------------------------------------------------------------------- */
+/* footer section */
+div.footer {
+    background-image: linear-gradient(#0009, #0009), url(../image/textured-metal-background.jpg);
+    background-size: contain;
+    color: #fff;
+}
+
+div.footer div.container {
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 10px;
+    --gap: 20px;
+    gap: var(--gap);
+    margin-inline: auto;
+}
+
+div.footer div.container>* {
+    width: 100%;
+}
+
+div.footer div.container div.about div.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+div.footer div.container div.about div.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+div.footer div.container div.about div.logo h2 {
+    font-size: 30px;
+    font-family: var(--font-default);
+}
+
+div.footer div.container div.about div.logo h2::after {
+    content: ".";
+    color: var(--primary-color);
+}
+
+div.footer div.container div.about p {
+    font-family: var(--font-default);
+    margin-block: 10px;
+}
+
+div.footer div.container div.about h3 {
+    font-size: 19px;
+    font-family: var(--font-secondary);
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid #ddd6;
+}
+
+div.footer div.container div.about ul {
+    list-style: none;
+}
+
+div.footer div.container div.about ul.social-media {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+div.footer div.container div.about ul.social-media li a {
+    text-decoration: none;
+    color: white;
+}
+
+div.footer div.container div.about ul.social-media li a i {
+    font-size: 24px;
+}
+
+div.footer div.container div.subscribe div.subscribe-info h3 {
+    font-size: 19px;
+    font-family: var(--font-secondary);
+}
+
+div.footer div.container div.subscribe div.subscribe-info p {
+    font-size: 16px;
+    font-family: var(--font-default);
+    margin-block: 10px;
+}
+
+div.footer div.container div.subscribe div.subscribe-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-block: 15px;
+}
+
+div.footer div.container div.subscribe div.subscribe-group input {
+    padding: 10px;
+    flex-grow: 1;
+}
+
+div.footer div.container div.subscribe div.subscribe-group button {
+    border: none;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 15px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+div.footer div.container div.subscribe div.subscribe-group button i {
+    margin-right: 3px;
+    font-size: 16px;
+}
+
+div.footer div.container div.subscribe div.subscribe-group button:hover {
+    background-color: #ea2424;
+}
+
+div.footer div.container div.quick-links h3 {
+    font-size: 19px;
+    font-family: var(--font-secondary);
+}
+
+div.footer div.container div.quick-links ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 10px;
+    --gap: 20px;
+    column-gap: var(--gap);
+}
+
+div.footer div.container div.quick-links ul li {
+    width: calc(calc(100% - var(--gap)) / 2);
+    padding: 5px;
+    font-family: var(--font-default);
+    transition: all 0.4s ease-in-out;
+}
+
+div.footer div.container div.quick-links ul li:hover {
+    transform: translateX(10px);
+    background-color: #222;
+}
+
+div.footer div.container div.quick-links ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+div.footer div.container div.quick-links ul li a i {
+    margin-right: 5px;
+}
+
+div.footer div.container div.footer-contact h3 {
+    font-size: 19px;
+    font-family: var(--font-secondary);
+    margin-bottom: 10px;
+}
+
+div.footer div.container div.footer-contact ul {
+    list-style: none;
+}
+
+div.footer div.container div.footer-contact ul li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+div.footer div.container div.footer-contact ul li i {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+div.footer div.container div.footer-contact ul li span {
+    font-size: 16px;
+    font-family: var(--font-default);
+}
+
+div.footer div.container div.footer-contact ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-family: var(--font-default);
+    color: #fff;
+}
+
+/* -------------------------------------------------------------------------------------------- */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+    /* Navbar section */
+    div.navbar div.container {
+        width: 80%;
+    }
+
+    /* Home section */
+    div.home div.container {
+        width: 80%;
+    }
+
+    /* chef section */
+    div.chef div.container {
+        width: 80%;
+    }
+
+    /* gallery section */
+    div.gallery div.container {
+        width: 80%;
+    }
+
+    /* contact section */
+    div.contact div.container {
+        width: 80%;
+    }
+
+    /* footer section */
+    div.footer div.container {
+        width: 80%;
+    }
+
+    div.footer div.container div.subscribe div.subscribe-group {
+        flex-direction: row;
+        justify-content: center;
+        gap: 5px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+    /* Navbar section */
+    div.navbar div.container {
+        width: 85%;
+    }
+
+    /* Home section */
+    div.home div.container {
+        width: 85%;
+    }
+
+    /* chef section */
+    div.chef div.container {
+        width: 85%;
+    }
+
+    div.chef div.container div.chef-item div.item {
+        width: calc(calc((100% - var(--gap)) / 2));
+    }
+
+    /* gallery section */
+    div.gallery div.container {
+        width: 85%;
+    }
+
+    div.gallery div.container div.gallery-image div.meal {
+        width: calc(calc((100% - 20px) / 2));
+    }
+
+    div.gallery div.container div.gallery-image {
+        height: 1500px;
+    }
+
+    /* contact section */
+    div.contact div.container {
+        width: 85%;
+    }
+
+    div.contact div.container div.details>div {
+        width: calc(calc((100% - 20px) / 2));
+    }
+
+    /* footer section */
+    div.footer div.container {
+        width: 85%;
+    }
+
+    div.footer div.container div.about,
+    div.footer div.container div.footer-contact {
+        width: calc(calc(100% - var(--gap)) / 2);
+        order: 1;
+    }
+
+    div.footer div.container div.subscribe {
+        order: 2;
+    }
+
+    div.footer div.container div.quick-links {
+        order: 3;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    /* Navbar section */
+    div.navbar div.container {
+        width: 97%;
+    }
+
+    /* Home section */
+    div.home div.container {
+        width: 97%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    div.home div.container>* {
+        width: 40%;
+    }
+
+    div.home div.container div.home-content {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    div.home div.container div.home-content div.btn a.booking {
+        border-top-left-radius: 0;
+    }
+
+    /* chef section */
+    div.chef div.container {
+        width: 97%;
+    }
+
+    div.chef div.container div.chef-item div.item {
+        width: calc(calc((100% - var(--gap) * 2) / 3));
+    }
+
+    /* gallery section */
+    div.gallery div.container {
+        width: 97%;
+    }
+
+    div.gallery div.container div.gallery-image div.meal {
+        width: calc(calc(100% - (20px * 2)) / 3);
+    }
+
+    div.gallery div.container div.gallery-image div.meal.pizza {
+        order: 1;
+    }
+
+    div.gallery div.container div.gallery-image div.meal.burger {
+        order: 5;
+    }
+
+    div.gallery div.container div.gallery-image div.meal.pizza-slices {
+        order: 2;
+    }
+
+    div.gallery div.container div.gallery-image div.meal.omelette {
+        order: 4;
+    }
+
+    div.gallery div.container div.gallery-image div.meal.steak {
+        order: 3;
+    }
+
+    div.gallery div.container div.gallery-image div.meal.fried {
+        order: 6;
+    }
+
+    div.gallery div.container div.gallery-image div.meal.kofta {
+        order: 7;
+    }
+
+    div.gallery div.container div.gallery-image {
+        height: 1000px;
+    }
+
+    /* contact section */
+    div.contact div.container {
+        width: 97%;
+    }
+
+    div.contact div.container div.details form div.input-group input {
+        width: calc(calc((100% - 10px) / 2));
+    }
+
+    /* footer section */
+    div.footer div.container {
+        width: 97%;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+    /* Navbar section */
+    div.navbar div.container {
+        width: 90%;
+    }
+
+    div.navbar div.container div.nav-links ul {
+        display: flex;
+    }
+
+    div.navbar div.container div.nav-links ul li {
+        list-style: none;
+        font-size: 17px;
+        font-weight: 600;
+        font-family: var(--font-default);
+        padding: 5px 15px;
+    }
+
+    div.navbar div.container div.nav-links ul a {
+        text-decoration: none;
+        color: var(--color-secondary);
+        position: relative;
+    }
+
+    div.navbar div.container div.nav-links ul li a.home-link {
+        color: var(--color-icon);
+        position: relative;
+    }
+
+    div.navbar div.container div.nav-links ul li a.home-link::after {
+        content: "";
+        height: 2.3px;
+        width: 100%;
+        background-color: var(--primary-color);
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+    }
+
+    div.navbar div.container div.nav-links ul a::after {
+        content: "";
+        height: 2.3px;
+        width: 0;
+        background-color: var(--primary-color);
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        transition: all 0.7S;
+    }
+
+    div.navbar div.container div.nav-links ul a:hover::after {
+        width: 100%;
+    }
+
+    div.navbar div.container div.nav-icon i.fa-bars {
+        display: none;
+    }
+
+    /* Home section */
+
+    div.home {
+        height: 100vh;
+    }
+
+    div.home div.container {
+        width: 90%;
+        margin-inline: auto;
+    }
+
+    /* chef section */
+    div.chef div.container {
+        width: 90%;
+    }
+
+    /* gallery section */
+    div.gallery div.container {
+        width: 90%;
+    }
+
+    div.gallery div.container div.gallery-image {
+        height: 1400px;
+    }
+
+    div.contact div.container {
+        width: 90%;
+    }
+
+    /* footer section */
+    div.footer div.container {
+        width: 90%;
+    }
+
+    div.footer div.container div.about,
+    div.footer div.container div.footer-contact {
+        width: calc(calc(100% - var(--gap) * 2) / 4);
+    }
+
+    div.footer div.container div.subscribe {
+        width: calc(calc(100% - var(--gap) * 2) / 2);
+    }
+
+    div.footer div.container div.footer-contact {
+        order: 3;
+    }
+}
