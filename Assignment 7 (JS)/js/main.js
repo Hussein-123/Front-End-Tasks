@@ -1,7 +1,7 @@
 //Q1 Write a program that allow to user enter number then print it
 /*
 var number = +window.prompt("Enter a Number : ");
-if (Number(number)) {
+if (!isNaN(number)) {
     window.alert("Your Number is : " + number);
 }
 else {
@@ -12,7 +12,7 @@ else {
 //Q2 Write a program that take number from user then print yes if that number can divide by 3 and 4 otherwise print no
 /*
 var number = +window.prompt("Enter a Number : ");
-if (Number(number)) {
+if (!isNaN(number)) {
     if (number % 3 == 0 && number % 4 == 0) {
         window.alert("Yes");
     }
@@ -29,7 +29,7 @@ else {
 /*
 var num1 = +window.prompt("Enter the First Number : ");
 var num2 = +window.prompt("Enter the Second Number : ");
-if (Number(num1) && Number(num2)) {
+if (!isNaN(num1) && !isNaN(num2)) {
     if (num1 > num2) {
         window.alert("Max Number is : " + num1);
     }
@@ -45,7 +45,7 @@ else {
 //Q4 Write a program that allows the user to insert an integer then print negative if it is negative number otherwise print positive
 /*
 var number = +window.prompt("Enter a Number : ");
-if (Number(number)) {
+if (!isNaN(number)) {
     if (number < 0) {
         window.alert("Your Number is Negative");
     }
@@ -63,7 +63,7 @@ else {
 var number1 = +window.prompt("Enter First Number : ");
 var number2 = +window.prompt("Enter Second Number : ");
 var number3 = +window.prompt("Enter Third Number : ");
-if (Number(number1) && Number(number2) && Number(number3)) {
+if (!isNaN(number1) && !isNaN(number2) && !isNaN(number3)) {
     var max = number1;
     if (number2 > max) {
         max = number2;
@@ -86,10 +86,10 @@ else {
 }
 */
 
-//Q6 Write a program that allows the user to insert integer number then check If a number is oven or odd
+//Q6 Write a program that allows the user to insert integer number then check If a number is even or odd
 /*
 var number = +window.prompt("Enter a Number : ");
-if (Number(number)) {
+if (!isNaN(number)) {
     if (number % 2 == 0) {
         window.alert("Your Number is Even");
     }
@@ -105,22 +105,6 @@ else {
 //Q7 Write a program that take character from user then if it is vowel chars (a,e,I,o,u) then print vowel otherwise print consonant
 /*
 var character = window.prompt("Enter a Character : ");
-switch (character) {
-    case "a":
-    case "e":
-    case "i":
-    case "o":
-    case "u":
-        window.alert("Your Character is Vowel");
-        break;
-    default:
-        window.alert("Your Character is Consonant");
-}
-*/
-
-// another solution using is statement
-/*
-var character = window.prompt("Enter a Character : ");
 if (character == 'a' || character == 'e' || character == 'i' || character == 'o' || character == 'u') {
     window.alert("Your Character is Vowel");
 } else {
@@ -131,25 +115,23 @@ if (character == 'a' || character == 'e' || character == 'i' || character == 'o'
 //Q8 Write a program that allows user to insert integer then print all numbers between 1 to that’s number
 /*
 var number = +window.prompt("Enter a Number : ");
-if (Number(number)) {
-    if (number > 0) {
-        for (var i = 1; i <= number; i++) {
-            console.log(i);
-        }
+if (!isNaN(number) && number != 0) {
+    for (var i = 1; i <= number; i++) {
+        console.log(i);
     }
-    else {
-        window.alert("Please Enter a Positive Number");
-    }
+}
+else if (number == 0) {
+    window.alert("Please Enter a valid Number");
 }
 else {
     window.alert("It's not a number");
 }
 */
 
-//Q9 Write a program that allows userto insert integerthen print a multiplication table up to 12
+//Q9 Write a program that allows user to insert integer then print a multiplication table up to 12
 /*
 var number = +window.prompt("Enter a Number : ");
-if (Number(number)) {
+if (!isNaN(number)) {
     for (var i = 1; i <= 12; i++) {
         console.log(`${number} x ${i} = ${number * i}`);
     }
@@ -162,7 +144,7 @@ else {
 //Q10 Write a program that allows to user to insert number then print all even numbers between 1 to this number
 /*
 var number = +window.prompt("Enter a Number : ");
-if (Number(number)) {
+if (!isNaN(number)) {
     if (number > 0) {
         for (var i = 1; i <= number; i++) {
             if (i % 2 == 0) {
@@ -183,7 +165,7 @@ else {
 /*
 var number = +window.prompt("Enter a Number : ");
 var exponent = +window.prompt("Enter the Exponent : ");
-if (Number(number) && Number(exponent)) {
+if (!isNaN(number) && !isNaN(exponent)) {
     var result = window.alert(`${number} rasied to the power of ${exponent} = ` + number ** exponent);
 }
 else {
@@ -198,7 +180,7 @@ var mark2 = +window.prompt("Enter the mark for subject 2:");
 var mark3 = +window.prompt("Enter the mark for subject 3:");
 var mark4 = +window.prompt("Enter the mark for subject 4:");
 var mark5 = +window.prompt("Enter the mark for subject 5:");
-if (Number(mark1) && Number(mark2) && Number(mark3) && Number(mark4) && Number(mark5)) {
+if (!isNaN(mark1) && !isNaN(mark2) && !isNaN(mark3) && !isNaN(mark4) && !isNaN(mark5)) {
     var total = mark1 + mark2 + mark3 + mark4 + mark5;
     window.alert(`Total of Marks = ${total}`);
     var average = total / 5;
@@ -213,62 +195,34 @@ else {
 
 //Q13 Write a program to input month number and print number of days in that month
 /*
-var month = +window.prompt("Enter the month number: ");
-if (Number(month)) {
-    switch (month) {
-        case 1:
-            window.alert("Days in month : 31");
-            break;
-        case 2:
-            window.alert("Days in month : 28 or 29");
-            break;
-        case 3:
-            window.alert("Days in month : 31");
-            break;
-        case 4:
-            window.alert("Days in month : 30");
-            break;
-        case 5:
-            window.alert("Days in month : 31");
-            break;
-        case 6:
-            window.alert("Days in month : 30");
-            break;
-        case 7:
-            window.alert("Days in month : 31");
-            break;
-        case 8:
-            window.alert("Days in month : 31");
-            break;
-        case 9:
-            window.alert("Days in month : 30");
-            break;
-        case 10:
-            window.alert("Days in month : 31");
-            break;
-        case 11:
-            window.alert("Days in month : 30");
-            break;
-        case 12:
-            window.alert("Days in month : 31");
-            break;
-        default:
-            window.alert("Enter invalid number");
+var month = +window.prompt("Enter the month number");
+if (!isNaN(month)) {
+    if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
+        window.alert("Days in month: 31");
+    }
+    else if (month == 4 || month == 6 || month == 9 || month == 11) {
+        window.alert("Days in month: 30");
+    }
+    else if (month == 2) {
+        window.alert("Days in month: 28 or 29");
+    }
+    else {
+        window.alert("Enter a valid month number");
     }
 }
 else {
-    window.alert("It's not a number");
+    window.alert("This is not a number");
 }
 */
 
-//Q14 Write a program to input marks of five subjects Physics, Chemistry, Biology, Mathematics and Computer , Find percentage and grade 
+//Q14 Write a program to input marks of five subjects Physics, Chemistry, Biology, Mathematics and Computer , Find percentage and grade
 /*
 var mark1 = +window.prompt("Enter the mark for Physics:");
 var mark2 = +window.prompt("Enter the mark for Chemistry:");
 var mark3 = +window.prompt("Enter the mark for Biology:");
 var mark4 = +window.prompt("Enter the mark for Mathematics:");
 var mark5 = +window.prompt("Enter the mark for Computer:");
-if (Number(mark1) && Number(mark2) && Number(mark3) && Number(mark4) && Number(mark5)) {
+if (!isNaN(mark1) && !isNaN(mark2) && !isNaN(mark3) && !isNaN(mark4) && !isNaN(mark5)) {
     var total = mark1 + mark2 + mark3 + mark4 + mark5;
     var percentage = (total / 500) * 100;
     if (percentage >= 90) {
@@ -299,32 +253,34 @@ else {
 //Q15 Write a program to print total number of days in month
 /*
 var month = +window.prompt("Enter the month number: ");
-if (Number(month)) {
-    switch (month) {
-        case 1:
-        case 3:
-        case 5:
-        case 7:
-        case 8:
-        case 10:
-        case 12:
-            window.alert("Days in month : 31");
-            break;
-        case 2:
-            window.alert("Days in month : 28 or 29");
-            break;
-        case 4:
-        case 6:
-        case 9:
-        case 11:
-            window.alert("Days in month : 30");
-            break;
-        default:
-            window.alert("Enter invalid number");
-    }
-}
-else {
-    window.alert("It's not a number");
+switch (!isNaN(month)) {
+    case true:
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                window.alert("Days in month : 31");
+                break;
+            case 2:
+                window.alert("Days in month : 28 or 29");
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                window.alert("Days in month : 30");
+                break;
+            default:
+                window.alert("Enter invalid number");
+        }
+        break;
+    case false:
+        window.alert("It's not a number");
+        break;
 }
 */
 
@@ -349,24 +305,23 @@ switch (character) {
 var num1 = +window.prompt("Enter the First Number : ");
 var num2 = +window.prompt("Enter the Second Number : ");
 var result;
-if (Number(num1) && Number(num2)) {
-    switch (true) {
-        case (num1 > num2):
-            result = num1;
-            break;
-        case (num2 > num1):
-            result = num2;
-            break;
-        case (num1 == num2):
-            result = "Two Numbers are Equal";
-            break;
-        default:
-            result = "invaild number";
-    }
-    window.alert(`The Maximum number is ${result}`);
-}
-else {
-    window.alert("It's not a number");
+switch (!isNaN(num1) && !isNaN(num2)) {
+    case true:
+        switch (true) {
+            case (num1 > num2):
+                result = num1;
+                break;
+            case (num2 > num1):
+                result = num2;
+                break;
+            default:
+                result = "invaild number";
+        }
+        window.alert(`The Maximum number is ${result}`);
+        break;
+    case false:
+        window.alert("It's not a number");
+        break;
 }
 */
 
@@ -419,11 +374,13 @@ switch (operation) {
         result = num1 * num2;
         break;
     case "/":
-        if (num2 != 0) {
-            result = num1 / num2;
-        }
-        else {
-            result = "Error: Division by zero is not allowed.";
+        switch (num2 != 0) {
+            case true:
+                result = num1 / num2;
+                break;
+            case false:
+                result = "Error: Division by zero is not allowed.";
+                break;
         }
         break;
     default:
