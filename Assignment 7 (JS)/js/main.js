@@ -115,10 +115,12 @@ if (character == 'a' || character == 'e' || character == 'i' || character == 'o'
 //Q8 Write a program that allows user to insert integer then print all numbers between 1 to that’s number
 /*
 var number = +window.prompt("Enter a Number : ");
+var result = "";
 if (!isNaN(number) && number != 0) {
     for (var i = 1; i <= number; i++) {
-        console.log(i);
+        result += i + "\n";
     }
+    window.alert(result);
 }
 else if (number == 0) {
     window.alert("Please Enter a valid Number");
@@ -131,10 +133,12 @@ else {
 //Q9 Write a program that allows user to insert integer then print a multiplication table up to 12
 /*
 var number = +window.prompt("Enter a Number : ");
+var result = "";
 if (!isNaN(number)) {
     for (var i = 1; i <= 12; i++) {
-        console.log(`${number} x ${i} = ${number * i}`);
+        result += number + " x " + i + " = " + number * i + "\n";
     }
+    window.alert(result);
 }
 else {
     window.alert("It's not a number");
@@ -144,13 +148,15 @@ else {
 //Q10 Write a program that allows to user to insert number then print all even numbers between 1 to this number
 /*
 var number = +window.prompt("Enter a Number : ");
+var result = ""
 if (!isNaN(number)) {
     if (number > 0) {
         for (var i = 1; i <= number; i++) {
             if (i % 2 == 0) {
-                console.log(i);
+                result += i + "\n";
             }
         }
+        window.alert(result);
     }
     else {
         window.alert("Please Enter a Positive Number");
@@ -359,6 +365,7 @@ switch (true) {
 */
 
 //Q20 Write a program to create Simple Calculator
+/*
 var num1 = +window.prompt("Enter the First Number : ");
 var num2 = +window.prompt("Enter the Second Number : ");
 var operation = window.prompt("Enter the operation you Want (+ , - , * , /) : ");
@@ -387,3 +394,4 @@ switch (operation) {
         result = "invalid operation.";
 }
 window.alert(`Result = ${result}`);
+*/
