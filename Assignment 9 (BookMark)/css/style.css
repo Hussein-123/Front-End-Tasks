@@ -61,22 +61,33 @@ div.container div.bookmark-body button:hover {
     border-color: #a03315;
 }
 
-table button.btn-visit {
+div.container div.bookmark-table .col {
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: #dee2e6;
+}
+
+div.container div.bookmark-table p {
+    overflow: auto;
+    margin: 0;
+}
+
+div.container button.visit-btn {
     background-color: #9eb23b;
     border-color: #9eb23b;
 }
 
-table button.btn-visit:hover {
+div.container button.visit-btn:hover {
     background-color: #8a9e23;
     border-color: #6e8018;
 }
 
-table button.btn-delete {
+div.container button.delete-btn {
     background-color: #eb1d36;
     border-color: #eb1d36;
 }
 
-table button.btn-delete:hover {
+div.container button.delete-btn:hover {
     background-color: #d30820;
     border-color: #ba081d;
 }

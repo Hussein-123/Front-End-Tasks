@@ -26,16 +26,26 @@ function addBookmark() {
 function displayBookmark() {
     var bookmarkString = ``;
     for (var i = 0; i < bookmarkList.length; i++) {
-        bookmarkString += `<tr>
-                            <td>${i + 1}</td>
-                            <td>${bookmarkList[i].bookmarkName}</td>
-                            <td>
-                                <button onclick="visitSite(${i})" class="btn btn-visit text-white"><i class="fa-solid fa-eye pe-2"></i>Visit</button>
-                            </td>
-                            <td>
-                                <button onclick="deleteSite(${i})" class="btn btn-delete text-white"><i class="fa-solid fa-trash-can pe-2"></i>Delete</button>
-                            </td>
-                        </tr>`
+        bookmarkString += `<div class="col py-2 d-flex justify-content-center align-items-center">
+                                <p>${i + 1}</p>
+                            </div>
+                            <div class="col py-2 d-flex justify-content-center align-items-center">
+                                <p>${bookmarkList[i].bookmarkName}</p>
+                            </div>
+                            <div class="col py-2 d-flex justify-content-center align-items-center">
+                                <button onclick="visitSite(${i})"
+                                    class="btn visit-btn text-white d-flex flex-column flex-sm-row align-items-center gap-2 d-block">
+                                    <i class="fa-solid fa-eye"></i>
+                                    Visit
+                                </button>
+                            </div>
+                            <div class="col py-2 d-flex justify-content-center align-items-center">
+                                <button onclick="deleteSite(${i})"
+                                    class="btn delete-btn text-white d-flex flex-column flex-sm-row align-items-center gap-2">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                    Delete
+                                </button>
+                             </div>`
     }
     tableContentMarks.innerHTML = bookmarkString;
 }
