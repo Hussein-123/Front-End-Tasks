@@ -17,7 +17,7 @@
 
 <body>
     <main class="py-5">
-        <div class="container">
+        <section class="container">
             <header class="d-flex justify-content-center">
                 <h1 class="py-2 position-relative">Bookmarker</h1>
             </header>
@@ -34,15 +34,16 @@
                         <i class="fa-solid fa-book-bookmark pe-2"></i>
                         Site Name
                     </label>
-                    <input type="text" name="site-name" id="bookmarkName" class="form-control"
-                        placeholder="Bookmark Name">
+                    <input oninput="isValidation(bookmarkRegex.siteNameRegex,this)" type="text" name="site-name"
+                        id="bookmarkName" class="form-control" placeholder="Bookmark Name">
                 </div>
                 <div class="site-url w-100">
                     <label for="bookmarkUrl" class="fw-semibold pb-2">
                         <i class="fa-solid fa-link pe-2"></i>
                         Site URL
                     </label>
-                    <input type="url" name="site-url" id="bookmarkUrl" class="form-control" placeholder="Website URL">
+                    <input oninput="isValidation(bookmarkRegex.siteUrlRegex,this)" type="url" name="site-url"
+                        id="bookmarkUrl" class="form-control" placeholder="Website URL">
                 </div>
                 <button onclick="addBookmark()" class="btn px-5 text-white" id="SubmitBtn">Submit</button>
             </div>
@@ -63,6 +64,37 @@
                         </div>
                     </div>
                     <div id="tableContent" class="row row-cols-4"></div>
+                </div>
+            </div>
+        </section>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content bg-light p-4 shadow-lg">
+                    <div class="modal-header p-0 mb-4 border-0 d-flex justify-content-center align-items-center">
+                        <div class="circles d-flex">
+                            <span class="rounded-circle me-2"></span>
+                            <span class="rounded-circle me-2"></span>
+                            <span class="rounded-circle me-2"></span>
+                        </div>
+                        <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-0">
+                        <p class="fw-semibold fs-5">
+                            Site Name or Url is not valid, Please follow the rules below :
+                        </p>
+                        <ol class="rules list-unstyled">
+                            <li>
+                                <i class="fa-regular fa-circle-right p-2"></i>Site name must
+                                begin with capital character and followed with at least 2 character and must be small
+                            </li>
+                            <li>
+                                <i class="fa-regular fa-circle-right p-2"></i>Site URL must be a
+                                valid one
+                            </li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div>

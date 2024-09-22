@@ -3,6 +3,11 @@ var bookmarkInputName = document.getElementById("bookmarkName");
 var bookmarkInputUrl = document.getElementById("bookmarkUrl");
 var tableContentMarks = document.getElementById("tableContent");
 var bookmarkList = [];
+
+var bookmarkRegex = {
+    siteNameRegex: /^[A-Z][a-z]{2,}$/,
+    siteUrlRegex: /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&=]*)/
+}
 // Local Storage
 if (localStorage.getItem("ourBookmarkList") != null) {
     bookmarkList = JSON.parse(localStorage.getItem("ourBookmarkList"));
@@ -12,14 +17,21 @@ if (localStorage.getItem("ourBookmarkList") != null) {
 
 // Add function
 function addBookmark() {
-    var bookmark = {
-        bookmarkName: bookmarkInputName.value,
-        bookmarkUrl: bookmarkInputUrl.value
+    if (isValidation(bookmarkRegex.siteNameRegex, bookmarkInputName) &
+        isValidation(bookmarkRegex.siteUrlRegex, bookmarkInputUrl)) {
+        var bookmark = {
+            bookmarkName: bookmarkInputName.value,
+            bookmarkUrl: bookmarkInputUrl.value
+        }
+        bookmarkList.push(bookmark);
+        displayBookmark();
+        localStorage.setItem("ourBookmarkList", JSON.stringify(bookmarkList));
+        resetAllInput();
     }
-    bookmarkList.push(bookmark);
-    displayBookmark();
-    localStorage.setItem("ourBookmarkList", JSON.stringify(bookmarkList));
-    resetAllInput();
+    else {
+        var myModal = new bootstrap.Modal(document.getElementById('myModal'));
+        myModal.show();
+    }
 }
 
 // Display function
@@ -54,6 +66,8 @@ function displayBookmark() {
 function resetAllInput() {
     bookmarkInputName.value = null;
     bookmarkInputUrl.value = null;
+    bookmarkInputName.classList.remove("is-valid", "is-invalid");
+    bookmarkInputUrl.classList.remove("is-valid", "is-invalid");
 }
 
 // Delete Site function
@@ -63,7 +77,21 @@ function deleteSite(deletedIndex) {
     localStorage.setItem("ourBookmarkList", JSON.stringify(bookmarkList));
 }
 
-// Visit Site Function
+// Visit Site function
 function visitSite(VisitedIndex) {
     window.open(bookmarkList[VisitedIndex].bookmarkUrl, "_blank")
+}
+
+// Validation function
+function isValidation(regex, bookmarkInput) {
+    if (regex.test(bookmarkInput.value)) {
+        bookmarkInput.classList.add("is-valid");
+        bookmarkInput.classList.remove("is-invalid");
+        return true;
+    }
+    else {
+        bookmarkInput.classList.add("is-invalid");
+        bookmarkInput.classList.remove("is-valid");
+        return false;
+    }
 }

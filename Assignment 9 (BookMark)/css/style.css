@@ -8,7 +8,7 @@ body {
     color: #352e28;
 }
 
-div.container header h1 {
+.container header h1 {
     font-size: 3.125rem;
     font-family: "Pacifico", cursive;
     color: #352e28;
@@ -16,7 +16,7 @@ div.container header h1 {
     width: fit-content;
 }
 
-div.container header h1::before {
+.container header h1::before {
     position: absolute;
     content: "";
     width: 100%;
@@ -28,17 +28,17 @@ div.container header h1::before {
     transition: all 350ms;
 }
 
-div.container header h1:hover::before {
+.container header h1:hover::before {
     height: 50%;
 }
 
-div.container div.bookmark-body {
+.container div.bookmark-body {
     border-width: 2px 0;
     border-style: dotted;
     border-color: #352e28;
 }
 
-div.container div.bookmark-body div.content h2 {
+.container div.bookmark-body div.content h2 {
     font-family: "Righteous", cursive;
     font-size: 1.125rem;
     background-image: linear-gradient(to right, #3ca55c, #b5ac49);
@@ -51,50 +51,76 @@ div.container div.bookmark-body div.content h2 {
     box-shadow: 0 0 0 0.25rem #fec26055;
 }
 
-div.container div.bookmark-body button {
+.container div.bookmark-body button {
     background-color: #d1512d;
     border-color: #d1512d;
 }
 
-div.container div.bookmark-body button:hover {
+.container div.bookmark-body button:hover {
     background-color: #bb4120;
     border-color: #a03315;
 }
 
-div.container div.bookmark-table .col {
+.container div.bookmark-table .col {
     border-width: 0 0 1px 0;
     border-style: solid;
     border-color: #dee2e6;
 }
 
-div.container div.bookmark-table p {
+.container div.bookmark-table p {
     overflow: auto;
     margin: 0;
 }
 
-div.container button.visit-btn {
+.container button.visit-btn {
     background-color: #9eb23b;
     border-color: #9eb23b;
 }
 
-div.container button.visit-btn:hover {
+.container button.visit-btn:hover {
     background-color: #8a9e23;
     border-color: #6e8018;
 }
 
-div.container button.delete-btn {
+.container button.delete-btn {
     background-color: #eb1d36;
     border-color: #eb1d36;
 }
 
-div.container button.delete-btn:hover {
+.container button.delete-btn:hover {
     background-color: #d30820;
     border-color: #ba081d;
 }
 
+.circles span {
+    width: 20px;
+    height: 20px;
+}
+
+.circles span:nth-child(1) {
+    background-color: #f15f5d;
+}
+
+.circles span:nth-child(2) {
+    background-color: #febe2e;
+}
+
+.circles span:nth-child(3) {
+    background-color: #4db748;
+}
+
+.rules li {
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+.rules i {
+    color: #bb4120;
+}
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-    div.container div.bookmark-body div.content h2 {
+    .container div.bookmark-body div.content h2 {
         font-size: 1.5625rem;
     }
 }
