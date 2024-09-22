@@ -79,7 +79,14 @@ function deleteSite(deletedIndex) {
 
 // Visit Site function
 function visitSite(VisitedIndex) {
-    window.open(bookmarkList[VisitedIndex].bookmarkUrl, "_blank")
+    var siteUrl = bookmarkList[VisitedIndex].bookmarkUrl;
+    if (!siteUrl.startsWith("https://") || !siteUrl.startsWith("http://")) {
+        siteUrl = `https://${bookmarkList[VisitedIndex].bookmarkUrl}`;
+        window.open(siteUrl, "_blank");
+    }
+    else {
+        window.open(siteUrl, "_blank");
+    }
 }
 
 // Validation function
