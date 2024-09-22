@@ -5,7 +5,7 @@ var tableContentMarks = document.getElementById("tableContent");
 var bookmarkList = [];
 
 var bookmarkRegex = {
-    siteNameRegex: /^[A-Z][a-z]{2,}$/,
+    siteNameRegex: /^[a-zA-Z][a-zA-Z]{2,}$/,
     siteUrlRegex: /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&=]*)/
 }
 // Local Storage
