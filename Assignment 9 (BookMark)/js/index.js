@@ -80,8 +80,12 @@ function deleteSite(deletedIndex) {
 // Visit Site function
 function visitSite(VisitedIndex) {
     var siteUrl = bookmarkList[VisitedIndex].bookmarkUrl;
-    if (!siteUrl.startsWith("https://") || !siteUrl.startsWith("http://")) {
-        siteUrl = `https://${bookmarkList[VisitedIndex].bookmarkUrl}`;
+    if (siteUrl.startsWith("http://")) {
+        siteUrl = `${siteUrl.replace("http://", "https://")}`
+        window.open(siteUrl, "_blank");
+    }
+    else if (!siteUrl.startsWith("https://")) {
+        siteUrl = `https://${bookmarkList[VisitedIndex].bookmarkUrl}`
         window.open(siteUrl, "_blank");
     }
     else {
