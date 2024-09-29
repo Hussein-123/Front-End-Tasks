@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <nav class="shadow-lg fixed-top py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <a href="#home" class="text-white text-decoration-none align-self-center fs-5">SMART LOGIN</a>
+            </div>
+            <div class="logout">
+                <a id="logoutBtn" href="#" class="btn btn-outline-warning py-2">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <div class="home-content vh-100 d-flex justify-content-center align-items-center">
+        <div class="container">
+            <div class="content m-auto w-75 p-5 box-shadow text-center">
+                <h1 class="text-capitalize" id="welcomeMessage"></h1>
+            </div>
+        </div>
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/home.js"></script>
+</body>
+
+</html>
