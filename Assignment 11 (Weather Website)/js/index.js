@@ -42,7 +42,7 @@ function dispalyTodayData(data) {
     todayDay.innerHTML = todayDate.getDate();
     todayMonth.innerHTML = todayDate.toLocaleDateString("en-US", { month: "long" })
     todayLocation.innerHTML = data.location.name;
-    todayTemp.innerHTML = data.current.temp_c;
+    todayTemp.innerHTML = data.current.temp_c + `<sup>o</sup> C`;
     todayConditionImage.setAttribute("src", data.current.condition.icon);
     todayCondition.innerHTML = data.current.condition.text;
     humidity.innerHTML = data.current.humidity + "%";
@@ -57,8 +57,8 @@ function dispalyNextData(data) {
         let nextDate = new Date(forecastData[i + 1].date);
         nextDay[i].innerHTML = nextDate.toLocaleDateString("en-US", { weekday: "long" });
         nextConditionImage[i].setAttribute("src", forecastData[i + 1].day.condition.icon);
-        maxTemp[i].innerHTML = forecastData[i + 1].day.maxtemp_c;
-        minTemp[i].innerHTML = forecastData[i + 1].day.mintemp_c;
+        maxTemp[i].innerHTML = forecastData[i + 1].day.maxtemp_c + `<sup>o</sup> C`;
+        minTemp[i].innerHTML = forecastData[i + 1].day.mintemp_c + `<sup>o</sup> C`;
         nextCondition[i].innerHTML = forecastData[i + 1].day.condition.text;
     }
 }

@@ -129,6 +129,7 @@ section.forecast-table .container .row {
 
 section.forecast-table .container .forecast-container .forecast {
     background: #323544;
+    border-radius: 10px;
     height: 100%;
 }
 
@@ -168,6 +169,7 @@ section.forecast-table .container .forecast-container .forecast.today .forecast-
 
 section.forecast-table .container .forecast-container .forecast .forecast-content .custom span {
     color: #009ad8;
+    font-size: 18px;
 }
 
 section.forecast-table .container .forecast-container .forecast .forecast-content .custom {
@@ -206,12 +208,13 @@ section.forecast-table .container .forecast-container .forecast.third-day .forec
 
 section.forecast-table .container .forecast-container .forecast.second-day .forecast-content .degree span.maxTemp,
 section.forecast-table .container .forecast-container .forecast.third-day .forecast-content .degree span.maxTemp {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 700;
 }
 
 section.forecast-table .container .forecast-container .forecast.second-day .forecast-content .degree span.minTemp,
 section.forecast-table .container .forecast-container .forecast.third-day .forecast-content .degree span.minTemp {
+    font-size: 18px;
     font-weight: 300;
 }
 
@@ -305,6 +308,10 @@ footer p {
     .navbar-collapse {
         background: none;
         margin-top: 0;
+        border-radius: 0;
+    }
+
+    section.forecast-table .container .forecast-container .forecast {
         border-radius: 0;
     }
 }
