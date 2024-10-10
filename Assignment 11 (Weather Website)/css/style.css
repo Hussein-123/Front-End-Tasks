@@ -1,0 +1,311 @@
+body {
+    font-family: "Roboto", sans-serif;
+    background: #1e202b;
+    color: #bfc1c8;
+}
+
+/* --------------------------------------------------------- */
+/* Navbar section */
+nav {
+    padding: 30px 0 !important;
+}
+
+nav .navbar-brand img {
+    width: 64px;
+    height: 38px;
+    margin-right: 10px;
+}
+
+nav .navbar-brand .logo h1 {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 5px;
+}
+
+nav .navbar-brand .logo p {
+    font-size: 10px;
+    color: #bfc1c8;
+    margin-bottom: 0;
+}
+
+ul.navbar-nav a.nav-link {
+    color: white;
+    padding: 20px !important;
+}
+
+ul.navbar-nav a.nav-link.active {
+    color: #009ad8 !important;
+}
+
+ul.navbar-nav a.nav-link:hover {
+    color: #009ad8 !important;
+}
+
+ul.navbar-nav li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li.nav-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+li.nav-item:last-child {
+    border-bottom: none;
+}
+
+.navbar-collapse {
+    background: #262936;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+nav.navbar div.container button.navbar-toggler {
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 40px;
+    padding: 20px;
+    transition: 0.3s ease
+}
+
+nav.navbar div.container button.navbar-toggler:hover {
+    border-color: #009ad8;
+    color: #009ad8;
+}
+
+.navbar div.container button.navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+/* --------------------------------------------------------- */
+/* Main section */
+section.location-search {
+    background-image: url(../image/banner.png);
+    background-size: cover;
+    padding-block: 70px;
+    min-height: 350px;
+}
+
+section.location-search .find-location {
+    margin-bottom: 70px;
+}
+
+section.location-search .find-location input.searchBtn {
+    width: 100%;
+    padding: 20px 50px 20px 20px;
+    background: #1e202b;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+}
+
+section.location-search .find-location button#submitBtn {
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    right: 5px;
+    padding: 0 40px;
+    background-color: #009ad8;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+}
+
+section.forecast-table {
+    position: relative;
+    top: -150px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+
+section.forecast-table .container .row {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+section.forecast-table .container .forecast-container .forecast {
+    background: #323544;
+    height: 100%;
+}
+
+section.forecast-table .container .forecast-container .forecast .forecast-header {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+section.forecast-table .container .forecast-container .forecast.today .forecast-header {
+    justify-content: space-between;
+}
+
+section.forecast-table .container .forecast-container .forecast.today .forecast-content {
+    padding: 30px 20px;
+    text-align: left;
+}
+
+section.forecast-table .container .forecast-container .forecast.today .forecast-content .location span {
+    font-size: 22px;
+}
+
+section.forecast-table .container .forecast-container .forecast.today .forecast-content .degree-content {
+    font-size: 80px;
+    font-weight: 500;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+section.forecast-table .container .forecast-container .forecast.today .forecast-content .degree-content img {
+    width: 90px;
+}
+
+section.forecast-table .container .forecast-container .forecast .forecast-content .custom span {
+    color: #009ad8;
+}
+
+section.forecast-table .container .forecast-container .forecast .forecast-content .custom {
+    margin-block: 20px;
+}
+
+section.forecast-table .container .forecast-container .forecast.today .forecast-content .weatherinfo {
+    display: flex;
+    gap: 25px;
+}
+
+section.forecast-table .container .forecast-container .forecast.today .forecast-content .weatherinfo span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+section.forecast-table .container .forecast-container .forecast.second-day {
+    background-color: #262936
+}
+
+section.forecast-table .container .forecast-container .forecast.second-day .forecast-content,
+section.forecast-table .container .forecast-container .forecast.third-day .forecast-content {
+    padding: 50px 20px 10px;
+}
+
+section.forecast-table .container .forecast-container .forecast.second-day .forecast-content img,
+section.forecast-table .container .forecast-container .forecast.third-day .forecast-content img {
+    width: 70px;
+}
+
+section.forecast-table .container .forecast-container .forecast.second-day .forecast-content .forecasticon,
+section.forecast-table .container .forecast-container .forecast.third-day .forecast-content .forecasticon {
+    margin-bottom: 20px;
+}
+
+section.forecast-table .container .forecast-container .forecast.second-day .forecast-content .degree span.maxTemp,
+section.forecast-table .container .forecast-container .forecast.third-day .forecast-content .degree span.maxTemp {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+section.forecast-table .container .forecast-container .forecast.second-day .forecast-content .degree span.minTemp,
+section.forecast-table .container .forecast-container .forecast.third-day .forecast-content .degree span.minTemp {
+    font-weight: 300;
+}
+
+/* --------------------------------------------------------- */
+/* Footer section */
+footer {
+    background: #262936;
+    padding: 50px 0;
+}
+
+footer .subscribe input.subscribeInput {
+    width: 100%;
+    padding: 20px 50px 20px 20px;
+    background: #1e202b;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+}
+
+footer .subscribe button.subscribeBtn {
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    right: 5px;
+    padding: 10px 20px;
+    background-color: #009ad8;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+}
+
+footer .social-media {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+footer .social-media a {
+    text-decoration: none;
+}
+
+footer .social-media a.icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #1e202b;
+    color: #009ad8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+footer .social-media a.icon:hover {
+    background: #009ad8;
+    color: white;
+}
+
+footer p {
+    font-size: 14px;
+    margin-bottom: 14px;
+    text-align: center;
+}
+
+/* --------------------------------------------------------- */
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+    /* Navbar section */
+    ul.navbar-nav a.nav-link {
+        padding: 5px 25px !important;
+        border: 2px solid transparent;
+        border-radius: 30px;
+    }
+
+    ul.navbar-nav a.nav-link.active {
+        border-color: #009ad8;
+    }
+
+    ul.navbar-nav a.nav-link:hover {
+        border-color: #009ad8;
+    }
+
+    li.nav-item {
+        margin-left: 10px;
+        border-bottom: none;
+    }
+
+    .navbar-collapse {
+        background: none;
+        margin-top: 0;
+        border-radius: 0;
+    }
+}
