@@ -17,14 +17,14 @@ nav .navbar-brand img {
 }
 
 nav .navbar-brand .logo h1 {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 700;
     color: white;
     margin-bottom: 5px;
 }
 
 nav .navbar-brand .logo p {
-    font-size: 10px;
+    font-size: 0.625rem;
     color: #bfc1c8;
     margin-bottom: 0;
 }
@@ -150,7 +150,7 @@ section.forecast-table .container .forecast-container .forecast.today .forecast-
 }
 
 section.forecast-table .container .forecast-container .forecast.today .forecast-content .location span {
-    font-size: 22px;
+    font-size: 1.375rem;
 }
 
 section.forecast-table .container .forecast-container .forecast.today .forecast-content .degree-content {
@@ -169,7 +169,7 @@ section.forecast-table .container .forecast-container .forecast.today .forecast-
 
 section.forecast-table .container .forecast-container .forecast .forecast-content .custom span {
     color: #009ad8;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 section.forecast-table .container .forecast-container .forecast .forecast-content .custom {
@@ -191,29 +191,24 @@ section.forecast-table .container .forecast-container .forecast.second-day {
     background-color: #262936
 }
 
-section.forecast-table .container .forecast-container .forecast.second-day .forecast-content,
-section.forecast-table .container .forecast-container .forecast.third-day .forecast-content {
+section.forecast-table .container .forecast-container .forecast .forecast-content {
     padding: 50px 20px 10px;
 }
 
-section.forecast-table .container .forecast-container .forecast.second-day .forecast-content img,
-section.forecast-table .container .forecast-container .forecast.third-day .forecast-content img {
+section.forecast-table .container .forecast-container .forecast .forecast-content img {
     width: 75px;
 }
 
-section.forecast-table .container .forecast-container .forecast.second-day .forecast-content .forecasticon,
-section.forecast-table .container .forecast-container .forecast.third-day .forecast-content .forecasticon {
+section.forecast-table .container .forecast-container .forecast .forecast-content .forecast-icon {
     margin-bottom: 20px;
 }
 
-section.forecast-table .container .forecast-container .forecast.second-day .forecast-content .degree span.maxTemp,
-section.forecast-table .container .forecast-container .forecast.third-day .forecast-content .degree span.maxTemp {
-    font-size: 26px;
+section.forecast-table .container .forecast-container .forecast .forecast-content .degree span.maxTemp {
+    font-size: 1.625rem;
     font-weight: 700;
 }
 
-section.forecast-table .container .forecast-container .forecast.second-day .forecast-content .degree span.minTemp,
-section.forecast-table .container .forecast-container .forecast.third-day .forecast-content .degree span.minTemp {
+section.forecast-table .container .forecast-container .forecast.second-day .forecast-content .degree span.minTemp {
     font-size: 18px;
     font-weight: 300;
 }
@@ -266,7 +261,7 @@ footer .social-media a.icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
+    font-size: 1.125rem;
     transition: all 0.3s ease;
 }
 
@@ -276,7 +271,7 @@ footer .social-media a.icon:hover {
 }
 
 footer p {
-    font-size: 14px;
+    font-size: 0.875rem;
     margin-bottom: 14px;
     text-align: center;
 }
@@ -319,6 +314,6 @@ footer p {
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
     section.forecast-table .container .forecast-container .forecast.today .forecast-content .degree-content {
-        font-size: 75px;
+        font-size: 4.6875rem;
     }
 }
